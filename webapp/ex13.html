@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+
+	<script type="text/javascript">
+		console.log("==============배열==============")
+		
+		//var array = [273, 32, 103, 57, 52];	//값이 미리 정해진 경우
+		
+		var array=[]		//값이 정해지지 않았을 때
+		array[0] = 273;
+		array[1] = 32;
+		array[2] = 103;
+		array[3] = 57;
+		array[4] = 53;
+		
+		/*
+		console.log(array[0]);		//273 출력
+		console.log(array[1]);
+		console.log(array[2]);
+		console.log(array[3]);
+		console.log(array[4]);
+		console.log(array[5]);		//undefined
+		*/
+		
+		for(var i = 0; i<array.length; i++){	//size가 아니고 length임
+			console.log(array[i]);
+		}		
+		
+		
+		
+		///////////////////////////////////////////////////////////////////
+		
+		
+		
+		console.log("===========다양한 형태의 값 삽입 가능===========");
+		var array2 = [];
+		array2[0] = 1;
+		array2[1] = 2.5;
+		array2[2] = 'A';		//''이나 ""이나 상관 없음
+		array2[3] = 'HELLO 안녕!!!'; 
+		
+		/*
+		console.log(array2[0]);
+		console.log(array2[1]);
+		console.log(array2[2]);
+		console.log(array2[3]);
+		*/
+		
+		for(var i = 0; i<array2.length; i++){
+			console.log(array2[i]);
+		}
+		
+		
+		
+		///////////////////////////////////////////////////////////////////
+		
+		
+		
+		console.log("======================");
+		var array = [273,"String", true, sum(5,2), [111,222], function(){return 3+4;}];
+		//console.log(array);		//toString같은 것. 값 뿐 아니라 기타 부가정보도 나옴
+		console.log(array[0]);
+		console.log(array[1]);
+		console.log(array[2]);
+		console.log(array[3]);
+		console.log(array[4][0]);		//array의 4번째 값의 0번째 값: 111
+		console.log(array[4][1]);		//array의 4번째 값의 1번째 값: 222
+		console.log(array[5]());		//()이 실행이기 때문에 ()이 없으면 식이 출력, ()이 있으면 값 출력.
+		
+		
+		function sum(a, b){
+			return a+b;
+		}		
+		
+		
+		console.log("======================");
+		var intArray = [];
+		
+		intArray.push(3);		//몇 개 들어있는짐 모를 경우 마지막에 하나 추가
+		console.log(intArray);
+		
+		intArray.push(3432);
+		console.log(intArray);
+		
+		intArray.pop();		//마지막거를 지워야할때
+		console.log(intArray);
+		
+	</script>
+
+</html>

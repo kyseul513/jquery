@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div>
+		<button id="btn" type="button">js 테스트</button>
+		<h1 id="display">이름 출력영역</h1>
+	</div>
+
+</body>
+
+	<script type="text/javascript">
+	
+		window.onload = function(){
+			// html -> 자바스크립트객체화
+			var testButton = document.getElementById("btn");	//자바스크립트가 제어할 수 있도록 html의 btn을 가져옴. 그걸 testButton 객체에 넣음
+			var testArea = document.getElementById("display");
+			
+			// 버튼을 클릭 했을때
+			testButton.onclick = function(){	//onclick이라는 필드에 메소드 정의.
+				console.log("버튼클릭");
+				//텍스트영역을 변경
+				testArea.innerHTML = '<font color = "red">홍길동</font>';
+			}		
+		}
+	</script>
+
+</html>

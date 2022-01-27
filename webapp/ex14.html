@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트 예제</h1>
+</body>
+
+	<script type="text/javascript">
+	
+	var guestbookVo = {
+			no:1, 					// no에는 1 넣기,
+			name:"가나다", 			// name에는 가나다 넣기
+			password:"1234", 
+			content:"첫방문입니다.",
+			showInfo:function(){return 3+4}
+	};
+	
+	//console.log(guestbookVo);
+	console.log(guestbookVo.no);
+	console.log(guestbookVo.name);
+	console.log(guestbookVo.password);
+	console.log(guestbookVo.content);
+	console.log(guestbookVo.showInfo());		//값을 반환하려면 () 넣기.
+	
+	guestbookVo.regDate = "2022-01-27";			//필드 추가
+	console.log(guestbookVo);
+
+	console.log("=================================================================");
+	
+	var personVo = {}		//필드가 정해지지 않은 경우
+	console.log(personVo);
+	
+	personVo.no = 1;		//후에 필드, 값 추가
+	personVo.name = "가가가";
+	personVo.hp = "010-2222-2222";
+	personVo.company = "02-2222-2222";
+	
+	console.log(personVo);
+	
+	console.log(personVo.name);
+	console.log(personVo["name"]);	//name출력법 2가지.
+	
+	
+	</script>
+
+</html>

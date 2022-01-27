@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1"> abcdefghijklmn </p>
+	<p id="p2"> 학교종이 땡땡땡 <br> abcdefg </p>
+</body>
+	
+	<script type="text/javascript">
+		$("#p1").html("<strong>가나다라마바사아자차카타파하</strong>");		//html로 불러오기. p1의 내용을 변경하고 굵은글씨로 바꿈.
+		//$("#p1").text("<strong>가나다라마바사아자차카타파하</strong>");	//text로 불러오기. 모두 글씨로 인식해서 태그가 작동하지 않음.
+		
+		var text = $("#p2").html();		//html내용<br>도 다 가져옴. text()로 가져오면 text값만 가져옴.
+		console.log(text);			
+		
+	</script>
+
+</html>

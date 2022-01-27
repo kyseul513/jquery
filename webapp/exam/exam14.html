@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+
+</body>
+
+	<script type="text/javascript">
+
+		$("li").on("click", function(){	
+			//console.log("클릭")
+			
+			/*
+			var tag = $(this);
+			tag.text("강예슬");
+			*/
+			
+			//간략하게(text)
+			//$(this).text("강예슬");
+			
+			//태그적용(html)
+			$(this).html("<strong>강예슬</strong>");
+		})		
+
+	
+	
+		/*
+		$("li").on("click", function(){		//이벤트 잡기. li를 클릭
+			var tag = $(this);				//방금 클릭한 li 정보 tag에 넣기
+			var tagId = tag.attr("id");		//li정보 중 id값 tagId에 넣기
+			//var tagtext = tag.text("id");	//내용 출력(첫번째 아이템입니다.)
+			console.log(tagId);
+		});	
+		*/
+	
+		/* 이걸로 하면 li마다 id지정을 해야해서 노가다....
+		$("#first").on("click", function(){		//first 클릭하면
+			var str = $("#first").text();		//first의 텍스트값 str에 담기
+			console.log(str)
+		});
+		*/
+		
+	</script>	
+
+</html>

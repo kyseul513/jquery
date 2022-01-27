@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+	<button id="btn" type="button" >li태그 추가버튼</button>
+
+</body>
+
+
+	<script type="text/javascript">	
+		$("ul").on("click", "li", function(){	//이벤트는 ul(부모)이 받고 일은 li(자식)가 함(위임)
+			
+			var $this = $(this);		
+			$this.text();
+			console.log($this.text());
+			
+			//$this.text("강예슬");	//클릭하면 내용 변경
+		})	
+	
+	
+	
+	/*	이 경우 추가된 li들에게는 이 functino이 작동하지 않음.
+		$("li").on("click", function(){
+			
+			var tag = $(this);		// 이름을 따로 안정하고 $this나 $that으로 쓰기도 함.
+			tag.text();
+			console.log(tag.text());
+			
+		})
+	*/
+		
+		$("#btn").on("click", function(){	
+			
+			$("ul").append("<li id='5'>다섯번째 아이템입니다.</li>");
+			$("ul").append("<li id='6'>여섯번째 아이템입니다.</li>");
+			$("ul").append("<li id='7'>일곱번째 아이템입니다.</li>");
+			
+		});				
+	
+	</script>
+
+</html>
